@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Paper View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="BFPaperViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-O9-2k4" customClass="BFPaperView">
+                                <rect key="frame" x="35" y="84" width="250" height="236"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ys3-jW-sS0" customClass="BFPaperView">
+                                        <rect key="frame" x="75" y="68" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.49618581839999998" green="1" blue="0.3553795139" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="236" id="DNA-1h-r9p"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ys3-jW-sS0" secondAttribute="bottom" constant="68" id="DOr-JD-aWT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ys3-jW-sS0" secondAttribute="trailing" constant="75" id="XLF-od-u5b"/>
+                                    <constraint firstAttribute="width" constant="250" id="foB-0J-6WV"/>
+                                    <constraint firstItem="Ys3-jW-sS0" firstAttribute="top" secondItem="E6n-O9-2k4" secondAttribute="top" constant="68" id="nGF-OO-Tf5"/>
+                                    <constraint firstItem="Ys3-jW-sS0" firstAttribute="leading" secondItem="E6n-O9-2k4" secondAttribute="leading" constant="75" id="tJO-2k-ADf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN9-h3-f8K" customClass="BFPaperView">
+                                <rect key="frame" x="35" y="350" width="250" height="145"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dN9-h3-f8K" secondAttribute="bottom" constant="73" id="Ql0-1p-TLE"/>
+                            <constraint firstItem="E6n-O9-2k4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="35" id="Z27-Xu-hza"/>
+                            <constraint firstItem="dN9-h3-f8K" firstAttribute="top" secondItem="E6n-O9-2k4" secondAttribute="bottom" constant="30" id="cQG-QS-K2q"/>
+                            <constraint firstAttribute="trailing" secondItem="E6n-O9-2k4" secondAttribute="trailing" constant="35" id="ma4-eP-Vcl"/>
+                            <constraint firstItem="E6n-O9-2k4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="nnz-6d-E5y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dN9-h3-f8K" secondAttribute="trailing" constant="19" id="nr4-Db-76a"/>
+                            <constraint firstItem="dN9-h3-f8K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="19" id="rNt-aR-6Je"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearPaperView" destination="dN9-h3-f8K" id="fJi-Fb-4Ht"/>
+                        <outlet property="noShadowPaperView" destination="Ys3-jW-sS0" id="Iei-fy-arg"/>
+                        <outlet property="paperView" destination="E6n-O9-2k4" id="C4r-TP-ftQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
