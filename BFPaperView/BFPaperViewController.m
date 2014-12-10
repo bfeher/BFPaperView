@@ -30,17 +30,17 @@
     self.paperView.isRaised = NO;
     
     // Customize smaller center view:
-    self.noShadowPaperView.tapCircleColor = [UIColor paperColorOrange];
+    self.noShadowPaperView.tapCircleColor = [[UIColor paperColorDeepPurpleA400] colorWithAlphaComponent:0.9f];
+    self.noShadowPaperView.cornerRadius = self.noShadowPaperView.bounds.size.width / 2;
+    self.noShadowPaperView.rippleBeyondBounds = YES;
+    self.noShadowPaperView.rippleFromTapLocation = NO;
+    self.noShadowPaperView.tapCircleDiameter = self.noShadowPaperView.bounds.size.width * 1.2;
     
     // Customize clear paper view:
-    self.clearPaperView.tapCircleColor = [UIColor paperColorPurpleA400];
+    self.clearPaperView.tapCircleColor = [UIColor paperColorBlue];
     self.clearPaperView.isRaised = NO;
     self.clearPaperView.layer.borderColor = [UIColor colorWithWhite:0.5 alpha:1].CGColor;
     self.clearPaperView.layer.borderWidth = 0.5f;
-    
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

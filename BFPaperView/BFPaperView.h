@@ -17,7 +17,7 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
 
 @interface BFPaperView : UIView <UIGestureRecognizerDelegate>
 
-/* Notes on RAISED vs FLAT and SMART COLOR vs NON SMART COLOR:
+/* Notes on RAISED vs FLAT:
  *
  * RAISED
  *  Has a shadow, so a clear background will look silly.

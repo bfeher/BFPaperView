@@ -214,9 +214,9 @@ static CGFloat const bfPaperView_clearBGFadeConstant             = 0.12f;
     
     self.letGo = YES;
     
-    if (self.growthFinished) {
+//    if (self.growthFinished) {
         [self growTapCircleABit];
-    }
+//    }
     [self fadeTapCircleOut];
     [self fadeBGOutAndBringShadowBackToStart];
 }
