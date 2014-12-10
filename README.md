@@ -2,19 +2,19 @@ BFPaperView
 =============
 [![CocoaPods](https://img.shields.io/cocoapods/v/BFPaperView.svg?style=flat)](https://github.com/bfeher/BFPaperView)
 
-> A flat button inspired by Google Material Design's Paper theme.
+> A flat view inspired by Google Material Design's Paper theme.
 
 ![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFPaperView/master/BFPaperViewDemoGif.gif "Animated Screenshot")
 
 
 About
 ---------
-_BFPaperView_ is a subclass of UIView that behaves much like the new paper buttons from Google's Material Design Labs.
+_BFPaperView_ is a subclass of UIView that behaves much like the new paper views from Google's Material Design Labs.
 All animation are asynchronous and are performed on sublayers.
 BFPaperViews work right away with pleasing default behaviors, however they can be easily customized! The corner radius, tap-circle color, background fade color, and tap-circle diameter are all readily customizable via public properties.
 
 BFPaperViews come in 2 flavors, Flat or Raised. 
-Flat BFPaperViews have no shadow and will remain flat through all animations. Flat buttons can be transparent, in which case the background will also fade a little when tapped.
+Flat BFPaperViews have no shadow and will remain flat through all animations. Flat views can be transparent, in which case the background will also fade a little when tapped.
 Raised BFPaperViews have a drop shadow that animates along with a tap, giving it the feeling of raising up with your touch. Raised BFPaperViews do not look good with a clear background color since it will expose their shadow layer underneath.
 
 By default, BFPaperViews use "Smart Color" which will match the tap-circle and background fade colors to the color of the `titleLabel`.
