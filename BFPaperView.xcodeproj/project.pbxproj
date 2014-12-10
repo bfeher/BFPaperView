@@ -58,8 +58,8 @@
 		F4BFBD6919C3E48100BE0E02 /* BFPaperViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BFPaperViewTests-Info.plist"; sourceTree = "<group>"; };
 		F4BFBD6B19C3E48100BE0E02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4BFBD6D19C3E48100BE0E02 /* BFPaperViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPaperViewTests.m; sourceTree = "<group>"; };
-		F4BFBD7719C3E4A900BE0E02 /* BFPaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperView.h; sourceTree = "<group>"; };
-		F4BFBD7819C3E4AA00BE0E02 /* BFPaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperView.m; sourceTree = "<group>"; };
+		F4BFBD7719C3E4A900BE0E02 /* BFPaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFPaperView.h; path = Classes/BFPaperView.h; sourceTree = "<group>"; };
+		F4BFBD7819C3E4AA00BE0E02 /* BFPaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFPaperView.m; path = Classes/BFPaperView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
