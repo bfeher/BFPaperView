@@ -24,29 +24,32 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ys3-jW-sS0" customClass="BFPaperView">
                                         <rect key="frame" x="75" y="68" width="100" height="100"/>
                                         <color key="backgroundColor" red="0.49618581839999998" green="1" blue="0.3553795139" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Sdt-Aa-OKF"/>
+                                            <constraint firstAttribute="height" constant="100" id="v1D-T0-puy"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Ys3-jW-sS0" secondAttribute="centerY" id="ApJ-pr-4OP"/>
                                     <constraint firstAttribute="height" constant="236" id="DNA-1h-r9p"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ys3-jW-sS0" secondAttribute="bottom" constant="68" id="DOr-JD-aWT"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ys3-jW-sS0" secondAttribute="trailing" constant="75" id="XLF-od-u5b"/>
-                                    <constraint firstAttribute="width" constant="250" id="foB-0J-6WV"/>
-                                    <constraint firstItem="Ys3-jW-sS0" firstAttribute="top" secondItem="E6n-O9-2k4" secondAttribute="top" constant="68" id="nGF-OO-Tf5"/>
-                                    <constraint firstItem="Ys3-jW-sS0" firstAttribute="leading" secondItem="E6n-O9-2k4" secondAttribute="leading" constant="75" id="tJO-2k-ADf"/>
+                                    <constraint firstAttribute="centerX" secondItem="Ys3-jW-sS0" secondAttribute="centerX" id="I4L-4I-BJk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN9-h3-f8K" customClass="BFPaperView">
                                 <rect key="frame" x="35" y="350" width="250" height="145"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="LQ7-jQ-WFw"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dN9-h3-f8K" secondAttribute="bottom" constant="73" id="Ql0-1p-TLE"/>
-                            <constraint firstItem="E6n-O9-2k4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="35" id="Z27-Xu-hza"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E6n-O9-2k4" secondAttribute="trailing" constant="19" id="W1u-y2-TjS"/>
+                            <constraint firstItem="E6n-O9-2k4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="19" id="bPd-oO-iqs"/>
                             <constraint firstItem="dN9-h3-f8K" firstAttribute="top" secondItem="E6n-O9-2k4" secondAttribute="bottom" constant="30" id="cQG-QS-K2q"/>
-                            <constraint firstAttribute="trailing" secondItem="E6n-O9-2k4" secondAttribute="trailing" constant="35" id="ma4-eP-Vcl"/>
                             <constraint firstItem="E6n-O9-2k4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="nnz-6d-E5y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dN9-h3-f8K" secondAttribute="trailing" constant="19" id="nr4-Db-76a"/>
                             <constraint firstItem="dN9-h3-f8K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="19" id="rNt-aR-6Je"/>
@@ -54,8 +57,8 @@
                     </view>
                     <connections>
                         <outlet property="clearPaperView" destination="dN9-h3-f8K" id="fJi-Fb-4Ht"/>
-                        <outlet property="noShadowPaperView" destination="Ys3-jW-sS0" id="Iei-fy-arg"/>
-                        <outlet property="paperView" destination="E6n-O9-2k4" id="C4r-TP-ftQ"/>
+                        <outlet property="largeBluePaperView" destination="E6n-O9-2k4" id="dfm-FL-xKw"/>
+                        <outlet property="smallGreenPaperView" destination="Ys3-jW-sS0" id="lfG-V5-QzX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

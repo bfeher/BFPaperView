@@ -10,9 +10,9 @@
 
 
 // Nice circle diameter constants with ugly names:
-static CGFloat const bfPaperView_tapCircleDiameterMedium = 200.f;
-static CGFloat const bfPaperView_tapCircleDiameterSmall = bfPaperView_tapCircleDiameterMedium / 2.f;
-static CGFloat const bfPaperView_tapCircleDiameterLarge = bfPaperView_tapCircleDiameterMedium * 1.8f;
+extern CGFloat const bfPaperView_tapCircleDiameterMedium;
+extern CGFloat const bfPaperView_tapCircleDiameterSmall;
+extern CGFloat const bfPaperView_tapCircleDiameterLarge;
 extern CGFloat const bfPaperView_tapCircleDiameterDefault;
 
 @interface BFPaperView : UIView <UIGestureRecognizerDelegate>

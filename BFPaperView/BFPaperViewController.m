@@ -13,9 +13,9 @@
 
 
 @interface BFPaperViewController ()
-@property (weak, nonatomic) IBOutlet BFPaperView *paperView;
+@property (weak, nonatomic) IBOutlet BFPaperView *largeBluePaperView;
 @property (weak, nonatomic) IBOutlet BFPaperView *clearPaperView;
-@property (weak, nonatomic) IBOutlet BFPaperView *noShadowPaperView;
+@property (weak, nonatomic) IBOutlet BFPaperView *smallGreenPaperView;
 @end
 
 @implementation BFPaperViewController
@@ -26,15 +26,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Customize large paper view:
-    self.paperView.tapCircleColor = [UIColor paperColorAmber];
-    self.paperView.isRaised = NO;
+    self.largeBluePaperView.tapCircleColor = [UIColor paperColorAmber];
+    self.largeBluePaperView.isRaised = YES;
     
     // Customize smaller center view:
-    self.noShadowPaperView.tapCircleColor = [[UIColor paperColorDeepPurpleA400] colorWithAlphaComponent:0.9f];
-    self.noShadowPaperView.cornerRadius = self.noShadowPaperView.bounds.size.width / 2;
-    self.noShadowPaperView.rippleBeyondBounds = YES;
-    self.noShadowPaperView.rippleFromTapLocation = NO;
-    self.noShadowPaperView.tapCircleDiameter = self.noShadowPaperView.bounds.size.width * 1.2;
+    self.smallGreenPaperView.tapCircleColor = [[UIColor paperColorDeepPurpleA400] colorWithAlphaComponent:0.9f];
+    self.smallGreenPaperView.cornerRadius = self.smallGreenPaperView.bounds.size.width / 2;
+    self.smallGreenPaperView.rippleBeyondBounds = YES;
+    self.smallGreenPaperView.rippleFromTapLocation = NO;
+    self.smallGreenPaperView.tapCircleDiameter = self.smallGreenPaperView.bounds.size.width * 1.2;
     
     // Customize clear paper view:
     self.clearPaperView.tapCircleColor = [UIColor paperColorBlue];
