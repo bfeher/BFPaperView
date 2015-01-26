@@ -96,6 +96,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F45A44F01A762B5B006A64C3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F4BFBD7719C3E4A900BE0E02 /* BFPaperView.h */,
+				F4BFBD7819C3E4AA00BE0E02 /* BFPaperView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		F4BFBD3619C3E48100BE0E02 = {
 			isa = PBXGroup;
 			children = (
@@ -131,13 +140,10 @@
 		F4BFBD4819C3E48100BE0E02 /* BFPaperView */ = {
 			isa = PBXGroup;
 			children = (
-				F4BFBD5119C3E48100BE0E02 /* BFPaperAppDelegate.h */,
-				F4BFBD5219C3E48100BE0E02 /* BFPaperAppDelegate.m */,
+				F45A44F01A762B5B006A64C3 /* Classes */,
 				F4BFBD5419C3E48100BE0E02 /* Main.storyboard */,
 				F4BFBD5719C3E48100BE0E02 /* BFPaperViewController.h */,
 				F4BFBD5819C3E48100BE0E02 /* BFPaperViewController.m */,
-				F4BFBD7719C3E4A900BE0E02 /* BFPaperView.h */,
-				F4BFBD7819C3E4AA00BE0E02 /* BFPaperView.m */,
 				F4BFBD5A19C3E48100BE0E02 /* Images.xcassets */,
 				F4BFBD4919C3E48100BE0E02 /* Supporting Files */,
 			);
@@ -147,6 +153,8 @@
 		F4BFBD4919C3E48100BE0E02 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4BFBD5119C3E48100BE0E02 /* BFPaperAppDelegate.h */,
+				F4BFBD5219C3E48100BE0E02 /* BFPaperAppDelegate.m */,
 				F4BFBD4A19C3E48100BE0E02 /* BFPaperView-Info.plist */,
 				F4BFBD4B19C3E48100BE0E02 /* InfoPlist.strings */,
 				F4BFBD4E19C3E48100BE0E02 /* main.m */,
