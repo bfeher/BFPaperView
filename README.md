@@ -56,7 +56,7 @@ A CGFLoat representing the duration of the animations which take place on touch 
 A CGFLoat representing the diameter of the tap-circle as soon as it spawns, before it grows. Default is `5.f`.
 
 `CGFloat tapCircleDiameter` <br />
-The CGFloat value representing the Diameter of the tap-circle. By default it will be the result of `MAX(self.frame.width, self.frame.height)`. Any value less than zero will result in default being used. The constants: `tapCircleDiameterLarge`, `tapCircleDiameterMedium`, and `tapCircleDiameterSmall` are also available for use.
+The CGFloat value representing the Diameter of the tap-circle. By default it will be the result of `MAX(self.frame.width, self.frame.height)`. `tapCircleDiameterFull` will calculate a circle that always fills the entire view. Any value less than or equal to `tapCircleDiameterFull` will result in default being used. The constants: `tapCircleDiameterLarge`, `tapCircleDiameterMedium`, and `tapCircleDiameterSmall` are also available for use. */
 
 `CGFloat tapCircleBurstAmount` <br />
 The CGFloat value representing how much we should increase the diameter of the tap-circle by when we burst it. Default is `100.f`.
