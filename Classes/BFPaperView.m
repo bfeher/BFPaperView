@@ -29,7 +29,8 @@
 CGFloat const bfPaperView_tapCircleDiameterMedium = 200.f;
 CGFloat const bfPaperView_tapCircleDiameterSmall = bfPaperView_tapCircleDiameterMedium / 2.f;
 CGFloat const bfPaperView_tapCircleDiameterLarge = bfPaperView_tapCircleDiameterMedium * 1.8f;
-CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
+CGFloat const bfPaperView_tapCircleDiameterFull = -1;
+CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 
 
 #pragma mark - Default Initializers
@@ -97,7 +98,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
                                  self.bounds.size.width + (2 * self.liftedShadowOffset.width),
                                  self.bounds.size.height + self.liftedShadowOffset.height);
         
-        self.layer.shadowColor = [UIColor colorWithWhite:0.2f alpha:1.f].CGColor;
+        self.layer.shadowColor = self.shadowColor.CGColor;
         self.layer.shadowOpacity = self.letGo ? self.loweredShadowOpacity : self.liftedShadowOpacity;
         self.layer.shadowRadius = self.letGo ? self.loweredShadowRadius : self.liftedShadowRadius;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.letGo ? self.downRect : self.upRect cornerRadius:self.cornerRadius].CGPath;
@@ -136,8 +137,6 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     // Animation:
     self.touchDownAnimationDuration  = 0.25f;
     self.touchUpAnimationDuration    = self.touchDownAnimationDuration * 2.5f;
-    self.tapCircleDiameterStartValue = 5.f;
-    self.tapCircleDiameter           = bfPaperView_tapCircleDiameterDefault;
     // Prettyness and Behaviour:
     self.isRaised                          = raised;
     self.cornerRadius                      = 0;
@@ -146,6 +145,9 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     self.shadowColor                       = [UIColor colorWithWhite:0.2f alpha:1.f];
     self.rippleFromTapLocation             = YES;
     self.rippleBeyondBounds                = NO;
+    self.tapCircleDiameterStartValue       = 5.f;
+    self.tapCircleDiameter                 = bfPaperView_tapCircleDiameterDefault;
+    self.tapCircleBurstAmount              = 100.f;
     self.dumbTapCircleFillColor            = [UIColor colorWithWhite:0.1 alpha:0.16f];
     self.clearBackgroundDumbTapCircleColor = [UIColor colorWithWhite:0.3 alpha:0.12f];
     self.clearBackgroundDumbFadeColor      = [UIColor colorWithWhite:0.3 alpha:0.12f];
@@ -183,7 +185,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
                                  self.bounds.size.width + (2 * self.liftedShadowOffset.width),
                                  self.bounds.size.height + self.liftedShadowOffset.height);
         
-        self.layer.shadowColor = [UIColor colorWithWhite:0.2f alpha:1.f].CGColor;
+        self.layer.shadowColor = self.shadowColor.CGColor;
         self.layer.shadowOpacity = self.loweredShadowOpacity;
         self.layer.shadowRadius = self.loweredShadowRadius;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.downRect cornerRadius:self.cornerRadius].CGPath;
@@ -215,7 +217,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     
     if (_isRaised) {
         // Draw shadow
-        self.layer.shadowColor = [UIColor colorWithWhite:0.2f alpha:1.f].CGColor;
+        self.layer.shadowColor = self.shadowColor.CGColor;
         self.layer.shadowOpacity = self.loweredShadowOpacity;
         self.layer.shadowRadius = self.loweredShadowRadius;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.downRect cornerRadius:self.cornerRadius].CGPath;
@@ -398,7 +400,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     }
     
     // Calculate the tap circle's ending diameter:
-    CGFloat tapCircleFinalDiameter = (self.tapCircleDiameter < 0) ? MAX(self.frame.size.width, self.frame.size.height) : self.tapCircleDiameter;
+    CGFloat tapCircleFinalDiameter = [self calculateTapCircleFinalDiameter];
     
     // Create a UIView which we can modify for its frame value later (specifically, the ability to use .center):
     UIView *tapCircleLayerSizerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tapCircleFinalDiameter, tapCircleFinalDiameter)];
@@ -446,8 +448,6 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     
     // Grow tap-circle animation (performed on mask layer):
     CABasicAnimation *tapCircleGrowthAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
-    tapCircleGrowthAnimation.delegate = self;
-    [tapCircleGrowthAnimation setValue:@"tapGrowth" forKey:@"id"];
     [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:)];
     tapCircleGrowthAnimation.duration = self.touchDownAnimationDuration;
     tapCircleGrowthAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
@@ -530,7 +530,6 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
         }
 
         CABasicAnimation *removeFadeBackgroundDarker = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        removeFadeBackgroundDarker.delegate = self;
         removeFadeBackgroundDarker.duration = self.touchUpAnimationDuration;
         removeFadeBackgroundDarker.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         removeFadeBackgroundDarker.fromValue = [NSNumber numberWithFloat:startingOpacity];
@@ -548,8 +547,9 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     //NSLog(@"expanding a bit more");
     
     // Calculate mask ending path:
-    CGFloat tapCircleDiameterEndValue = (self.tapCircleDiameter < 0) ? MAX(self.frame.size.width, self.frame.size.height) : self.tapCircleDiameter;
-    tapCircleDiameterEndValue += 100.f;
+    CGFloat tapCircleDiameterEndValue = [self calculateTapCircleFinalDiameter];
+    tapCircleDiameterEndValue += self.tapCircleBurstAmount;
+    
     UIView *endingRectSizerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tapCircleDiameterEndValue, tapCircleDiameterEndValue)];
     endingRectSizerView.center = self.rippleFromTapLocation ? self.tapPoint : CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     
@@ -593,6 +593,29 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     
     [tapCircle addAnimation:tapCircleGrowthAnimation forKey:@"animatePath"];
     [tapCircle addAnimation:fadeOut forKey:@"opacityAnimation"];
+}
+
+- (CGFloat)calculateTapCircleFinalDiameter
+{
+    CGFloat finalDiameter = self.tapCircleDiameter;
+    if (self.tapCircleDiameter == bfPaperView_tapCircleDiameterFull) {
+        // Calulate a diameter that will always cover the entire button:
+        //////////////////////////////////////////////////////////////////////////////
+        // Special thanks to github user @ThePantsThief for providing this code!    //
+        //////////////////////////////////////////////////////////////////////////////
+        CGFloat centerWidth   = self.frame.size.width;
+        CGFloat centerHeight  = self.frame.size.height;
+        CGFloat tapWidth      = 2 * MAX(self.tapPoint.x, centerWidth - self.tapPoint.x);
+        CGFloat tapHeight     = 2 * MAX(self.tapPoint.y, centerHeight - self.tapPoint.y);
+        CGFloat desiredWidth  = self.rippleFromTapLocation ? tapWidth : centerWidth;
+        CGFloat desiredHeight = self.rippleFromTapLocation ? tapHeight : centerHeight;
+        CGFloat diameter      = sqrt(pow(desiredWidth, 2) + pow(desiredHeight, 2));
+        finalDiameter = diameter;
+    }
+    else if (self.tapCircleDiameter < bfPaperView_tapCircleDiameterFull) {    // default
+        finalDiameter = MAX(self.frame.size.width, self.frame.size.height);
+    }
+    return finalDiameter;
 }
 #pragma mark -
 

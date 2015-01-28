@@ -13,6 +13,7 @@
 extern CGFloat const bfPaperView_tapCircleDiameterMedium;
 extern CGFloat const bfPaperView_tapCircleDiameterSmall;
 extern CGFloat const bfPaperView_tapCircleDiameterLarge;
+extern CGFloat const bfPaperView_tapCircleDiameterFull;
 extern CGFloat const bfPaperView_tapCircleDiameterDefault;
 
 @interface BFPaperView : UIView <UIGestureRecognizerDelegate>
@@ -79,15 +80,19 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
 @property CGFloat touchDownAnimationDuration;
 /** A CGFLoat representing the duration of the animations which take place on touch UP! Default is 2 * touchDownAnimationDuration seconds. */
 @property CGFloat touchUpAnimationDuration;
-/** A CGFLoat representing the diameter of the tap-circle as soon as it spawns, before it grows. Default is 5.f. */
-@property CGFloat tapCircleDiameterStartValue;
-/** The CGFloat value representing the Diameter of the tap-circle. By default it will be the result of MAX(self.frame.width, self.frame.height). Any value less than zero will result in default being used. The constants: tapCircleDiameterLarge, tapCircleDiameterMedium, and tapCircleDiameterSmall are also available for use. */
-@property CGFloat tapCircleDiameter;
 
 
 #pragma mark Prettyness and Behaviour
 /** The corner radius which propagates through to the sub layers. Default is 0. */
 @property (nonatomic) CGFloat cornerRadius;
+
+/** A CGFLoat representing the diameter of the tap-circle as soon as it spawns, before it grows. Default is 5.f. */
+@property CGFloat tapCircleDiameterStartValue;
+/** The CGFloat value representing the Diameter of the tap-circle. By default it will be the result of MAX(self.frame.width, self.frame.height). tapCircleDiameterFull will calculate a circle that always fills the entire view. Any value less than or equal to tapCircleDiameterFull will result in default being used. The constants: tapCircleDiameterLarge, tapCircleDiameterMedium, and tapCircleDiameterSmall are also available for use. */
+@property CGFloat tapCircleDiameter;
+
+/** The CGFloat value representing how much we should increase the diameter of the tap-circle by when we burst it. Default is 100.f. */
+@property CGFloat tapCircleBurstAmount;
 
 /** The UIColor to use for the circle which appears where you tap. NOTE: Setting this defeats the "Smart Color" ability of the tap circle. Alpha values less than 1 are recommended. */
 @property UIColor *tapCircleColor;

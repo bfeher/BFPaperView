@@ -58,6 +58,9 @@ A CGFLoat representing the diameter of the tap-circle as soon as it spawns, befo
 `CGFloat tapCircleDiameter` <br />
 The CGFloat value representing the Diameter of the tap-circle. By default it will be the result of `MAX(self.frame.width, self.frame.height)`. Any value less than zero will result in default being used. The constants: `tapCircleDiameterLarge`, `tapCircleDiameterMedium`, and `tapCircleDiameterSmall` are also available for use.
 
+`CGFloat tapCircleBurstAmount` <br />
+The CGFloat value representing how much we should increase the diameter of the tap-circle by when we burst it. Default is `100.f`.
+
 `CGFloat cornerRadius` <br />
 The corner radius which propagates through to the sub layers. Default is `0`.
 
@@ -119,7 +122,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFPaperView to your project.
 ```ruby
 platform :ios, '7.0'
-pod 'BFPaperView', '~> 2.0.19'
+pod 'BFPaperView', '~> 2.0.25'
 ```
 
 
