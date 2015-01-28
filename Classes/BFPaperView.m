@@ -88,7 +88,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     if (self.isRaised) {
         // Draw shadow
         self.downRect = CGRectMake(self.bounds.origin.x - self.loweredShadowOffset.width,
-                                   self.bounds.origin.y - self.loweredShadowOffset.height,
+                                   self.bounds.origin.y + self.loweredShadowOffset.height,
                                    self.bounds.size.width + (2 * self.loweredShadowOffset.width),
                                    self.bounds.size.height + self.loweredShadowOffset.height);
         
@@ -174,7 +174,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
     if (self.isRaised) {
         // Draw shadow
         self.downRect = CGRectMake(self.bounds.origin.x - self.loweredShadowOffset.width,
-                                   self.bounds.origin.y - self.loweredShadowOffset.height,
+                                   self.bounds.origin.y + self.loweredShadowOffset.height,
                                    self.bounds.size.width + (2 * self.loweredShadowOffset.width),
                                    self.bounds.size.height + self.loweredShadowOffset.height);
         
@@ -204,7 +204,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -1;
 {
     _isRaised = isRaised;
     self.downRect = CGRectMake(self.bounds.origin.x - self.loweredShadowOffset.width,
-                               self.bounds.origin.y - self.loweredShadowOffset.height,
+                               self.bounds.origin.y + self.loweredShadowOffset.height,
                                self.bounds.size.width + (2 * self.loweredShadowOffset.width),
                                self.bounds.size.height + self.loweredShadowOffset.height);
     
