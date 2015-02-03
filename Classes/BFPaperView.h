@@ -41,6 +41,17 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
  */
 - (instancetype)initWithRaised:(BOOL)raised;
 
+/**
+ *  Initializes a BFPaperView without a frame, specifiying a block to run on tap. Can be Raised of Flat.
+ *
+ *  @param raised          A BOOL flag to determine whether or not this instance should be raised or flat. YES = Raised, NO = Flat.
+ *  @param tapHandlerBlock A block of code to run when the view is tapped.
+ *
+ *  @return A (Raised or Flat) BFPaperView without a frame!
+ */
+- (instancetype)initWithRaised:(BOOL)raised
+               tapHandlerBlock:(void (^)())tapHandlerBlock;
+
 
 /**
  *  Initializes a BFPaperView with a frame. Can be Raised of Flat.
@@ -50,7 +61,22 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
  *
  *  @return A (Raised or Flat) BFPaperView with a frame!
  */
-- (instancetype)initWithFrame:(CGRect)frame raised:(BOOL)raised;
+- (instancetype)initWithFrame:(CGRect)frame
+                       raised:(BOOL)raised;
+
+/**
+ *  Initializes a BFPaperView with a frame, specifiying a block to run on tap. Can be Raised of Flat.
+ *
+ *  @param frame  A CGRect to use as the view's frame.
+ *  @param raised A BOOL flag to determine whether or not this instance should be raised or flat. YES = Raised, NO = Flat.
+ *  @param tapHandlerBlock A block of code to run when the view is tapped.
+ *
+ *  @return A (Raised or Flat) BFPaperView with a frame!
+ */
+- (instancetype)initWithFrame:(CGRect)frame
+                       raised:(BOOL)raised
+              tapHandlerBlock:(void (^)())tapHandlerBlock;
+
 
 
 #pragma mark - Properties
@@ -108,5 +134,8 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
 
 /** A flag to set to YES to CHANGE a flat view to raised, or set to NO to CHANGE a raised view to flat. If you used one of the provided custom initializers, you should probably leave this parameter alone. If you instantiated via storyboard or IB and want to change from riased to flat, this is the parameter for you! Default is YES. */
 @property (nonatomic) BOOL isRaised;
+
+/** A block to run on touch up, if the touch up is witin the bounds of the view. Basically turning the view into a button. */
+@property (nonatomic, copy) void (^tapHandler)();
 
 @end

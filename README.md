@@ -10,6 +10,7 @@ BFPaperView
 About
 ---------
 ### Now with smoother animations and more public properties for even easier customization!
+### Also New: Tap-Handler blocks! 
 
 
 _BFPaperView_ is a subclass of UIView that behaves much like the new paper views from Google's Material Design Labs.
@@ -76,6 +77,9 @@ A flag to set to `YES` to have the tap-circle ripple from point of touch. If thi
 `BOOL rippleBeyondBounds` <br />
 A flag to set to `YES` to have the tap-circle ripple beyond the bounds of the view. If this is set to `NO`, the tap-circle will be clipped to the view's bounds. Default is `NO`.
 
+`(nonatomic, copy) void (^tapHandler)()` <br />
+A block to run on touch up, if the touch up is witin the bounds of the view. Basically turning the view into a button.
+
 `BOOL isRaised` <br />
 A flag to set to `YES` to CHANGE a flat view to raised, or set to `NO` to CHANGE a raised view to flat. If you used one of the provided custom initializers, you should probably leave this parameter alone. If you instantiated via storyboard or IB and want to CHANGE from riased to flat, this is the parameter for you! Default is `YES`.
 
@@ -101,6 +105,11 @@ BFPaperView *flatPaperView = [[BFPaperView alloc] initWithFrame:rect raised:NO];
 BFPaperView *raisedPaperView = [[BFPaperView alloc] initWithFrame:rect raised:YES];
 ```
 
+### Creating a Raised BFPaperView with a Tap-Handler block (could also be flat, just change raised flag to NO)
+```objective-c
+BFPaperView *raisedPaperViewWithATapHanlder = [[BFPaperView alloc] initWithFrame:rect raised:YES tapHandlerBlock:someBlockToRunOnTapUp];
+```
+
 ### Customized Example
 ```objective-c
 BFPaperView *paperView = [[BFPaperView alloc] initWithFrame:CGRectMake(116, 468, 86, 86) raised:YES];
@@ -122,7 +131,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFPaperView to your project.
 ```ruby
 platform :ios, '7.0'
-pod 'BFPaperView', '~> 2.0.25'
+pod 'BFPaperView', '~> 2.1.5'
 ```
 
 

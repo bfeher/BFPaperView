@@ -38,7 +38,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 {
     self = [super init];
     if (self) {
-        [self bfPaperViewSetup:YES];
+        [self bfPaperViewSetupRaised:YES tapHandlerBlock:nil];
     }
     return self;
 }
@@ -47,7 +47,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self bfPaperViewSetup:YES];
+        [self bfPaperViewSetupRaised:YES tapHandlerBlock:nil];
     }
     return self;
 }
@@ -56,7 +56,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 {
     self = [super initWithCoder:decoder];
     if (self) {
-        [self bfPaperViewSetup:YES];
+        [self bfPaperViewSetupRaised:YES tapHandlerBlock:nil];
     }
     return self;
 }
@@ -66,7 +66,17 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 {
     self = [super init];
     if (self) {
-        [self bfPaperViewSetup:raised];
+        [self bfPaperViewSetupRaised:raised tapHandlerBlock:nil];
+    }
+    return self;
+}
+
+- (instancetype)initWithRaised:(BOOL)raised
+               tapHandlerBlock:(void (^)())tapHandlerBlock
+{
+    self = [super init];
+    if (self) {
+        [self bfPaperViewSetupRaised:raised tapHandlerBlock:tapHandlerBlock];
     }
     return self;
 }
@@ -75,7 +85,18 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self bfPaperViewSetup:raised];
+        [self bfPaperViewSetupRaised:raised tapHandlerBlock:nil];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+                       raised:(BOOL)raised
+              tapHandlerBlock:(void (^)())tapHandlerBlock
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self bfPaperViewSetupRaised:raised tapHandlerBlock:tapHandlerBlock];
     }
     return self;
 }
@@ -120,7 +141,8 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 
 
 #pragma mark - Setup
-- (void)bfPaperViewSetup:(BOOL)raised
+- (void)bfPaperViewSetupRaised:(BOOL)raised
+               tapHandlerBlock:(void (^)())tapHandlerBlock
 {
     self.letGo = YES;
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -196,6 +218,8 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
         self.layer.shadowOpacity = 0.f;
     }
     
+    self.tapHandler = tapHandlerBlock;
+
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:nil];
     tapGestureRecognizer.delegate = self;
     [self addGestureRecognizer:tapGestureRecognizer];
@@ -257,6 +281,14 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
     
     self.letGo = YES;
     [self touchUpAnimations];
+    
+    if (nil != self.tapHandler) {
+        CGPoint location = [[touches anyObject] locationInView:self];
+        CGRect fingerRect = CGRectMake(location.x - 5, location.y - 5, 10, 10);
+        if (CGRectIntersectsRect(fingerRect, self.bounds)) {
+            self.tapHandler();
+        }
+    }
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event

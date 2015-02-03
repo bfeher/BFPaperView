@@ -41,6 +41,11 @@
     self.clearPaperView.isRaised = NO;
     self.clearPaperView.layer.borderColor = [UIColor colorWithWhite:0.5 alpha:1].CGColor;
     self.clearPaperView.layer.borderWidth = 0.5f;
+    
+    void (^clearTapBlock)() = ^void() {
+        NSLog(@"Tapped on clear view!");
+    };
+    self.clearPaperView.tapHandler = clearTapBlock;
 }
 
 - (void)didReceiveMemoryWarning
