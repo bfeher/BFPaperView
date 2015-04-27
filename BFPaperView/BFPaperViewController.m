@@ -42,8 +42,8 @@
     self.clearPaperView.layer.borderColor = [UIColor colorWithWhite:0.5 alpha:1].CGColor;
     self.clearPaperView.layer.borderWidth = 0.5f;
     
-    void (^clearTapBlock)() = ^void() {
-        NSLog(@"Tapped on clear view!");
+    void (^clearTapBlock)() = ^void(CGPoint location) {
+        NSLog(@"Tapped on clear view at x:%@ y:%@!", @(location.x), @(location.y));
     };
     self.clearPaperView.tapHandler = clearTapBlock;
 }
