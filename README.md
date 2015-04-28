@@ -7,6 +7,11 @@ BFPaperView
 ![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFPaperView/master/BFPaperViewDemoGif.gif "Animated Screenshot")
 
 
+Changes
+--------
+> Please see included [CHANGELOG file](https://github.com/bfeher/BFPaperView/blob/master/CHANGELOG.md).
+
+
 About
 ---------
 ### Now with smoother animations and more public properties for even easier customization!
@@ -77,7 +82,7 @@ A flag to set to `YES` to have the tap-circle ripple from point of touch. If thi
 `BOOL rippleBeyondBounds` <br />
 A flag to set to `YES` to have the tap-circle ripple beyond the bounds of the view. If this is set to `NO`, the tap-circle will be clipped to the view's bounds. Default is `NO`.
 
-`(nonatomic, copy) void (^tapHandler)()` <br />
+`(nonatomic, copy) void (^tapHandler)(CGPoint location)` <br />
 A block to run on touch up, if the touch up is witin the bounds of the view. Basically turning the view into a button.
 
 `BOOL isRaised` <br />
@@ -112,7 +117,7 @@ BFPaperView *raisedPaperViewWithATapHanlder = [[BFPaperView alloc] initWithFrame
 
 ### Customized Example
 ```objective-c
-BFPaperView *paperView = [[BFPaperView alloc] initWithFrame:CGRectMake(116, 468, 86, 86) raised:YES];
+BFPaperView *paperView = [[BFPaperView alloc] initWithFrame:CGRectMake(116, 468, 86, 86) raised:YES tapHandlerBlock:someBlockToRunOnTapUp];
 paperView.backgroundColor = [UIColor colorWithRed:0.3 green:0 blue:1 alpha:1];
 paperView.tapCircleColor = [UIColor colorWithRed:1 green:0 blue:1 alpha:0.6];  // Setting this color overrides "Smart Color".
 paperView.cornerRadius = paperView.frame.size.width / 2;
@@ -131,7 +136,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFPaperView to your project.
 ```ruby
 platform :ios, '7.0'
-pod 'BFPaperView', '~> 2.1.6'
+pod 'BFPaperView', '~> 2.2.1'
 ```
 
 
