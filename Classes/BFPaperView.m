@@ -72,7 +72,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 }
 
 - (instancetype)initWithRaised:(BOOL)raised
-               tapHandlerBlock:(void (^)())tapHandlerBlock
+               tapHandlerBlock:(void (^)(CGPoint location))tapHandlerBlock
 {
     self = [super init];
     if (self) {
@@ -92,7 +92,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 
 - (instancetype)initWithFrame:(CGRect)frame
                        raised:(BOOL)raised
-              tapHandlerBlock:(void (^)())tapHandlerBlock
+              tapHandlerBlock:(void (^)(CGPoint location))tapHandlerBlock
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -142,7 +142,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 
 #pragma mark - Setup
 - (void)bfPaperViewSetupRaised:(BOOL)raised
-               tapHandlerBlock:(void (^)())tapHandlerBlock
+               tapHandlerBlock:(void (^)(CGPoint location))tapHandlerBlock
 {
     self.letGo = YES;
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -286,7 +286,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
         CGPoint location = [[touches anyObject] locationInView:self];
         CGRect fingerRect = CGRectMake(location.x - 5, location.y - 5, 10, 10);
         if (CGRectIntersectsRect(fingerRect, self.bounds)) {
-            self.tapHandler();
+            self.tapHandler(location);
         }
     }
 }

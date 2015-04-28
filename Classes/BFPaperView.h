@@ -50,7 +50,7 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
  *  @return A (Raised or Flat) BFPaperView without a frame!
  */
 - (instancetype)initWithRaised:(BOOL)raised
-               tapHandlerBlock:(void (^)())tapHandlerBlock;
+               tapHandlerBlock:(void (^)(CGPoint location))tapHandlerBlock;
 
 
 /**
@@ -75,7 +75,7 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
  */
 - (instancetype)initWithFrame:(CGRect)frame
                        raised:(BOOL)raised
-              tapHandlerBlock:(void (^)())tapHandlerBlock;
+              tapHandlerBlock:(void (^)(CGPoint location))tapHandlerBlock;
 
 
 
@@ -136,6 +136,6 @@ extern CGFloat const bfPaperView_tapCircleDiameterDefault;
 @property (nonatomic) BOOL isRaised;
 
 /** A block to run on touch up, if the touch up is witin the bounds of the view. Basically turning the view into a button. */
-@property (nonatomic, copy) void (^tapHandler)();
+@property (nonatomic, copy) void (^tapHandler)(CGPoint location);
 
 @end
