@@ -136,7 +136,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFPaperView to your project.
 ```ruby
 platform :ios, '7.0'
-pod 'BFPaperView', '~> 2.2.1'
+pod 'BFPaperView', '~> 2.2.2'
 ```
 
 

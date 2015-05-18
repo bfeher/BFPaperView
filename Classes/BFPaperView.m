@@ -123,7 +123,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
         self.layer.shadowOpacity = self.letGo ? self.loweredShadowOpacity : self.liftedShadowOpacity;
         self.layer.shadowRadius = self.letGo ? self.loweredShadowRadius : self.liftedShadowRadius;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.letGo ? self.downRect : self.upRect cornerRadius:self.cornerRadius].CGPath;
-        self.layer.shadowOffset = CGSizeMake(0.f, 1.0f);
+        self.layer.shadowOffset = self.loweredShadowOffset;
     }
     else {
         // Erase shadow:
@@ -211,7 +211,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
         self.layer.shadowOpacity = self.loweredShadowOpacity;
         self.layer.shadowRadius = self.loweredShadowRadius;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.downRect cornerRadius:self.cornerRadius].CGPath;
-        self.layer.shadowOffset = CGSizeMake(0.f, 1.0f);
+        self.layer.shadowOffset = self.loweredShadowOffset;
     }
     else {
         // Erase shadow:
@@ -245,7 +245,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
         self.layer.shadowOpacity = self.loweredShadowOpacity;
         self.layer.shadowRadius = self.loweredShadowRadius;
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.downRect cornerRadius:self.cornerRadius].CGPath;
-        self.layer.shadowOffset = CGSizeMake(0.f, 1.0f);
+        self.layer.shadowOffset = self.loweredShadowOffset;
     }
     else {
         // Erase shadow:
