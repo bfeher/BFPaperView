@@ -127,7 +127,7 @@ paperView.tapCircleDiameter = MAX(paperView.frame.size.width, paperView.frame.si
 [self.view addSubview:paperView];
 ```
 
-Cocoapods
+CocoaPods
 -------
 
 CocoaPods are the best way to manage library dependencies in Objective-C projects.
