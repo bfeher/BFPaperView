@@ -6,6 +6,11 @@ BFPaperView
 
 
 
+2.2.2.1
+---------
+^ Migrated to CocoaPods 1.0.
+
+
 2.2.2
 ---------
 + ^ Fixed bug where loweredShadowOffset property wasn't being utilized and instead was ignored for a hardcoded default value.
