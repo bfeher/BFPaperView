@@ -7,261 +7,282 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B995A3DC50AFD2982421618 /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3A893782543C538A3038D /* UIColor+BFPaperColors.m */; };
-		70A5DC1BFE3F395E29906012 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A70441032BFF2706EFDB34D /* Foundation.framework */; };
-		985C51FEABBC2EB4FC658D29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A70441032BFF2706EFDB34D /* Foundation.framework */; };
-		9A51889D3B5BD36E9EE57824 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0ACE53E5DC45C6268CDD34 /* Pods-dummy.m */; };
-		B8F3385ADCF41D16AAC7AD36 /* Pods-UIColor+BFPaperColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0151079E49E8ED592BBC0357 /* Pods-UIColor+BFPaperColors-dummy.m */; };
-		F2B132928067ECCDDED63C50 /* UIColor+BFPaperColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F72351B21976E038E8D051 /* UIColor+BFPaperColors.h */; };
+		116FF1AB725CFB7DEB955E0F307741AD /* UIColor+BFPaperColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64541EC087F3E89FC703D5BE30014635 /* UIColor+BFPaperColors-dummy.m */; };
+		24C28768CB4F75562B7A1DE6A864C0E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		767401166CE27C2CF65356B188A02098 /* UIColor+BFPaperColors.h in Headers */ = {isa = PBXBuildFile; fileRef = EC259E37D8A75AEBAD709ADA6D1F3B1E /* UIColor+BFPaperColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		946E206A9F1D99CC2A4D43386B06F47E /* Pods-BFPaperView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 852280926F5FC53EF34920A9AAD7C902 /* Pods-BFPaperView-dummy.m */; };
+		ABB21444E0FBD5210A8ADF0D31F3D806 /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CDA8A61441647472758C9E68839164 /* UIColor+BFPaperColors.m */; };
+		C72C4B7F74F4DAC1543C956DDFB48738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB7CC1C94D6C66B8516A4287 /* PBXContainerItemProxy */ = {
+		42ADBB5A94933AD483CAE272E5D47B48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 297F68E5FD0CDC6A22F25BB5 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8290E32568328B629227A941;
-			remoteInfo = "Pods-UIColor+BFPaperColors";
+			remoteGlobalIDString = 00CD6220C9349DF1D00DC4134F324C1D;
+			remoteInfo = "UIColor+BFPaperColors";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0151079E49E8ED592BBC0357 /* Pods-UIColor+BFPaperColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIColor+BFPaperColors-dummy.m"; sourceTree = "<group>"; };
-		24DAC49B6D807C4593AC3C53 /* libPods-UIColor+BFPaperColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIColor+BFPaperColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		260B481EFC7A6130CA796788 /* Pods-UIColor+BFPaperColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIColor+BFPaperColors-prefix.pch"; sourceTree = "<group>"; };
-		31B4E45F3FC910EEBECC527F /* Pods-UIColor+BFPaperColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIColor+BFPaperColors.xcconfig"; sourceTree = "<group>"; };
-		3A70441032BFF2706EFDB34D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4B9E144A7FCF767DE2E5C8A7 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		4BC3A893782543C538A3038D /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BFPaperColors.m"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
-		67F72351B21976E038E8D051 /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+BFPaperColors.h"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
-		894042CE5F97776629955A79 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		936C8B253CFB35DA882AD58A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		B06F83F26DCE3767DFCC69D4 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B189D1F5271122A8BBDD871D /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D8828331DC20BE669B35512B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		D9F7ADF4FB9462E1DA8D040A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		DB84D8FFCAA1F00923BD3601 /* Pods-UIColor+BFPaperColors-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIColor+BFPaperColors-Private.xcconfig"; sourceTree = "<group>"; };
-		F7F0DE85BEF7558FBC9A2F46 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0ACE53E5DC45C6268CDD34 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2DD6960CE43205C1FE122BB2021960E6 /* libUIColor+BFPaperColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIColor+BFPaperColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FAD5963E2498655925CC9A44396195A /* libPods-BFPaperView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFPaperView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4882479E4C72F41A9018BD097BC87491 /* Pods-BFPaperView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BFPaperView-acknowledgements.plist"; sourceTree = "<group>"; };
+		62A280BA718FE2BF661AE5F417B6F35D /* Pods-BFPaperView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BFPaperView-resources.sh"; sourceTree = "<group>"; };
+		64541EC087F3E89FC703D5BE30014635 /* UIColor+BFPaperColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BFPaperColors-dummy.m"; sourceTree = "<group>"; };
+		6DC4B22780EA8F61AB6721C6F8E7A43A /* UIColor+BFPaperColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFPaperColors-prefix.pch"; sourceTree = "<group>"; };
+		852280926F5FC53EF34920A9AAD7C902 /* Pods-BFPaperView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BFPaperView-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA7E1838532CB110F85B16699C9DB6C5 /* Pods-BFPaperView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFPaperView.debug.xcconfig"; sourceTree = "<group>"; };
+		C3947B66308466543880FD1BA0DFA399 /* UIColor+BFPaperColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor+BFPaperColors.xcconfig"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D8C92BE4DE9E1937112D33D1F8FA582F /* Pods-BFPaperView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BFPaperView-frameworks.sh"; sourceTree = "<group>"; };
+		EC259E37D8A75AEBAD709ADA6D1F3B1E /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+BFPaperColors.h"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
+		EFA8719BAF6DCF58C0155012A5D18329 /* Pods-BFPaperView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFPaperView.release.xcconfig"; sourceTree = "<group>"; };
+		F39C33B8491055CFB7D4DB2CD89F9284 /* Pods-BFPaperView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BFPaperView-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4CDA8A61441647472758C9E68839164 /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BFPaperColors.m"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3A5626D2E36979A82F738C60 /* Frameworks */ = {
+		0776CF86258B34A33D102396D62E846C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A5DC1BFE3F395E29906012 /* Foundation.framework in Frameworks */,
+				C72C4B7F74F4DAC1543C956DDFB48738 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B80BBDE04CD2F81ABD70ADA /* Frameworks */ = {
+		6055ED52B5CCEF8F1D7297B28B32BA6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				985C51FEABBC2EB4FC658D29 /* Foundation.framework in Frameworks */,
+				24C28768CB4F75562B7A1DE6A864C0E9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FFE8DC399A15C005E685BEC /* UIColor+BFPaperColors */ = {
+		376103B5DAA6FAD44FB1EACCCFAECE17 /* Pods-BFPaperView */ = {
 			isa = PBXGroup;
 			children = (
-				67F72351B21976E038E8D051 /* UIColor+BFPaperColors.h */,
-				4BC3A893782543C538A3038D /* UIColor+BFPaperColors.m */,
-				C1E7118DEF446C5FDA6AAB46 /* Support Files */,
+				F39C33B8491055CFB7D4DB2CD89F9284 /* Pods-BFPaperView-acknowledgements.markdown */,
+				4882479E4C72F41A9018BD097BC87491 /* Pods-BFPaperView-acknowledgements.plist */,
+				852280926F5FC53EF34920A9AAD7C902 /* Pods-BFPaperView-dummy.m */,
+				D8C92BE4DE9E1937112D33D1F8FA582F /* Pods-BFPaperView-frameworks.sh */,
+				62A280BA718FE2BF661AE5F417B6F35D /* Pods-BFPaperView-resources.sh */,
+				AA7E1838532CB110F85B16699C9DB6C5 /* Pods-BFPaperView.debug.xcconfig */,
+				EFA8719BAF6DCF58C0155012A5D18329 /* Pods-BFPaperView.release.xcconfig */,
 			);
-			path = "UIColor+BFPaperColors";
+			name = "Pods-BFPaperView";
+			path = "Target Support Files/Pods-BFPaperView";
 			sourceTree = "<group>";
 		};
-		30A0D9D990DB1F94177B5F7D = {
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B189D1F5271122A8BBDD871D /* Podfile */,
-				48FE409A6BC9D4F0E7BEC203 /* Frameworks */,
-				98E40B2623669B5586F1AE8E /* Pods */,
-				5E540CDDAA9F911640852137 /* Products */,
-				6495929FD699F9EBC05A4D44 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		4376A1A0562034BC6B89F6BC /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3A70441032BFF2706EFDB34D /* Foundation.framework */,
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		48FE409A6BC9D4F0E7BEC203 /* Frameworks */ = {
+		6F4FD05780D395F75CEACA10813F28DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4376A1A0562034BC6B89F6BC /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5E540CDDAA9F911640852137 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F7F0DE85BEF7558FBC9A2F46 /* libPods.a */,
-				24DAC49B6D807C4593AC3C53 /* libPods-UIColor+BFPaperColors.a */,
+				3FAD5963E2498655925CC9A44396195A /* libPods-BFPaperView.a */,
+				2DD6960CE43205C1FE122BB2021960E6 /* libUIColor+BFPaperColors.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6495929FD699F9EBC05A4D44 /* Targets Support Files */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				D1A762A305B3699EBC499913 /* Pods */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F8BA45DD31E351527879CB9E7F149B79 /* Pods */,
+				6F4FD05780D395F75CEACA10813F28DB /* Products */,
+				D763A36EE9F51887C9F1CED4DC207F09 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8BDB7062D0C4B4AB77A0CC08D5F69618 /* UIColor+BFPaperColors */ = {
+			isa = PBXGroup;
+			children = (
+				EC259E37D8A75AEBAD709ADA6D1F3B1E /* UIColor+BFPaperColors.h */,
+				F4CDA8A61441647472758C9E68839164 /* UIColor+BFPaperColors.m */,
+				E4FA455FB789A1C754022419F4A73C89 /* Support Files */,
+			);
+			path = "UIColor+BFPaperColors";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D763A36EE9F51887C9F1CED4DC207F09 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				376103B5DAA6FAD44FB1EACCCFAECE17 /* Pods-BFPaperView */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		98E40B2623669B5586F1AE8E /* Pods */ = {
+		E4FA455FB789A1C754022419F4A73C89 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1FFE8DC399A15C005E685BEC /* UIColor+BFPaperColors */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C1E7118DEF446C5FDA6AAB46 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				31B4E45F3FC910EEBECC527F /* Pods-UIColor+BFPaperColors.xcconfig */,
-				DB84D8FFCAA1F00923BD3601 /* Pods-UIColor+BFPaperColors-Private.xcconfig */,
-				0151079E49E8ED592BBC0357 /* Pods-UIColor+BFPaperColors-dummy.m */,
-				260B481EFC7A6130CA796788 /* Pods-UIColor+BFPaperColors-prefix.pch */,
+				C3947B66308466543880FD1BA0DFA399 /* UIColor+BFPaperColors.xcconfig */,
+				64541EC087F3E89FC703D5BE30014635 /* UIColor+BFPaperColors-dummy.m */,
+				6DC4B22780EA8F61AB6721C6F8E7A43A /* UIColor+BFPaperColors-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Pods-UIColor+BFPaperColors";
+			path = "../Target Support Files/UIColor+BFPaperColors";
 			sourceTree = "<group>";
 		};
-		D1A762A305B3699EBC499913 /* Pods */ = {
+		F8BA45DD31E351527879CB9E7F149B79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B06F83F26DCE3767DFCC69D4 /* Pods-acknowledgements.markdown */,
-				D8828331DC20BE669B35512B /* Pods-acknowledgements.plist */,
-				FB0ACE53E5DC45C6268CDD34 /* Pods-dummy.m */,
-				4B9E144A7FCF767DE2E5C8A7 /* Pods-environment.h */,
-				894042CE5F97776629955A79 /* Pods-resources.sh */,
-				D9F7ADF4FB9462E1DA8D040A /* Pods.debug.xcconfig */,
-				936C8B253CFB35DA882AD58A /* Pods.release.xcconfig */,
+				8BDB7062D0C4B4AB77A0CC08D5F69618 /* UIColor+BFPaperColors */,
 			);
 			name = Pods;
-			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DB5E545D9E328EDE9D8FE5B9 /* Headers */ = {
+		34C933C90346B68FC31859CAFB312993 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B132928067ECCDDED63C50 /* UIColor+BFPaperColors.h in Headers */,
+				767401166CE27C2CF65356B188A02098 /* UIColor+BFPaperColors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8290E32568328B629227A941 /* Pods-UIColor+BFPaperColors */ = {
+		00CD6220C9349DF1D00DC4134F324C1D /* UIColor+BFPaperColors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E604397609998B86B2E436A /* Build configuration list for PBXNativeTarget "Pods-UIColor+BFPaperColors" */;
+			buildConfigurationList = 5AF23A6A77C4475093F3412E2AE96C5F /* Build configuration list for PBXNativeTarget "UIColor+BFPaperColors" */;
 			buildPhases = (
-				9BD8EFC82FC3251D2038F900 /* Sources */,
-				4B80BBDE04CD2F81ABD70ADA /* Frameworks */,
-				DB5E545D9E328EDE9D8FE5B9 /* Headers */,
+				8C23B294E3F9FEDCDB5C71A2043B6453 /* Sources */,
+				0776CF86258B34A33D102396D62E846C /* Frameworks */,
+				34C933C90346B68FC31859CAFB312993 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-UIColor+BFPaperColors";
-			productName = "Pods-UIColor+BFPaperColors";
-			productReference = 24DAC49B6D807C4593AC3C53 /* libPods-UIColor+BFPaperColors.a */;
+			name = "UIColor+BFPaperColors";
+			productName = "UIColor+BFPaperColors";
+			productReference = 2DD6960CE43205C1FE122BB2021960E6 /* libUIColor+BFPaperColors.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E6A07B81F2380F3B4E9845B6 /* Pods */ = {
+		F801BE0A418B571058545AB3FD8228C4 /* Pods-BFPaperView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F380D31D501D389B34D5AF2 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 91E02CE6616A946E53B2B71E9412E99F /* Build configuration list for PBXNativeTarget "Pods-BFPaperView" */;
 			buildPhases = (
-				1078E8CE46D47E9D2F4272FA /* Sources */,
-				3A5626D2E36979A82F738C60 /* Frameworks */,
+				187BAC87DEFEF2AF9D30CB13C9E429CA /* Sources */,
+				6055ED52B5CCEF8F1D7297B28B32BA6F /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5F711D5607736B5F2E268290 /* PBXTargetDependency */,
+				A69A95E790F8B67541EC82BE03507162 /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = F7F0DE85BEF7558FBC9A2F46 /* libPods.a */;
+			name = "Pods-BFPaperView";
+			productName = "Pods-BFPaperView";
+			productReference = 3FAD5963E2498655925CC9A44396195A /* libPods-BFPaperView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		297F68E5FD0CDC6A22F25BB5 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 5554A74E58B64D442BD96093 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 30A0D9D990DB1F94177B5F7D;
-			productRefGroup = 5E540CDDAA9F911640852137 /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6F4FD05780D395F75CEACA10813F28DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E6A07B81F2380F3B4E9845B6 /* Pods */,
-				8290E32568328B629227A941 /* Pods-UIColor+BFPaperColors */,
+				F801BE0A418B571058545AB3FD8228C4 /* Pods-BFPaperView */,
+				00CD6220C9349DF1D00DC4134F324C1D /* UIColor+BFPaperColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1078E8CE46D47E9D2F4272FA /* Sources */ = {
+		187BAC87DEFEF2AF9D30CB13C9E429CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A51889D3B5BD36E9EE57824 /* Pods-dummy.m in Sources */,
+				946E206A9F1D99CC2A4D43386B06F47E /* Pods-BFPaperView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BD8EFC82FC3251D2038F900 /* Sources */ = {
+		8C23B294E3F9FEDCDB5C71A2043B6453 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F3385ADCF41D16AAC7AD36 /* Pods-UIColor+BFPaperColors-dummy.m in Sources */,
-				6B995A3DC50AFD2982421618 /* UIColor+BFPaperColors.m in Sources */,
+				116FF1AB725CFB7DEB955E0F307741AD /* UIColor+BFPaperColors-dummy.m in Sources */,
+				ABB21444E0FBD5210A8ADF0D31F3D806 /* UIColor+BFPaperColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5F711D5607736B5F2E268290 /* PBXTargetDependency */ = {
+		A69A95E790F8B67541EC82BE03507162 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-UIColor+BFPaperColors";
-			target = 8290E32568328B629227A941 /* Pods-UIColor+BFPaperColors */;
-			targetProxy = BB7CC1C94D6C66B8516A4287 /* PBXContainerItemProxy */;
+			name = "UIColor+BFPaperColors";
+			target = 00CD6220C9349DF1D00DC4134F324C1D /* UIColor+BFPaperColors */;
+			targetProxy = 42ADBB5A94933AD483CAE272E5D47B48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3FAAFC1811F00D558EEF4CBD /* Debug */ = {
+		1F8007794E6238CB64107572A261154D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA8719BAF6DCF58C0155012A5D18329 /* Pods-BFPaperView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3FA2475660FFC880302AD18E29B2E5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -276,10 +297,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -297,58 +320,32 @@
 			};
 			name = Debug;
 		};
-		5BD6A9EA5DA7AB7CBC707A1E /* Debug */ = {
+		EA8B0EB2E43633B50018FBE11063E59F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB84D8FFCAA1F00923BD3601 /* Pods-UIColor+BFPaperColors-Private.xcconfig */;
+			baseConfigurationReference = AA7E1838532CB110F85B16699C9DB6C5 /* Pods-BFPaperView.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-UIColor+BFPaperColors/Pods-UIColor+BFPaperColors-prefix.pch";
+				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		CBD4379260C26BF3D5EC7B62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 936C8B253CFB35DA882AD58A /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		CD83EEB24F101546E11FCFBB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9F7ADF4FB9462E1DA8D040A /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F23B5973F591D85D5E08C6AA /* Release */ = {
+		F325026B55060D3B22BEC0BAB5FA7344 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -365,7 +362,10 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -379,17 +379,43 @@
 			};
 			name = Release;
 		};
-		FB9299F241F7F9C8B2A8DA13 /* Release */ = {
+		F6163FE7AB0F3FB6A0F69C9F3424178B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB84D8FFCAA1F00923BD3601 /* Pods-UIColor+BFPaperColors-Private.xcconfig */;
+			baseConfigurationReference = C3947B66308466543880FD1BA0DFA399 /* UIColor+BFPaperColors.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-UIColor+BFPaperColors/Pods-UIColor+BFPaperColors-prefix.pch";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAF0FCBFBD43B1CC0127572644FBAE1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3947B66308466543880FD1BA0DFA399 /* UIColor+BFPaperColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -398,34 +424,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E604397609998B86B2E436A /* Build configuration list for PBXNativeTarget "Pods-UIColor+BFPaperColors" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BD6A9EA5DA7AB7CBC707A1E /* Debug */,
-				FB9299F241F7F9C8B2A8DA13 /* Release */,
+				3FA2475660FFC880302AD18E29B2E5FC /* Debug */,
+				F325026B55060D3B22BEC0BAB5FA7344 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F380D31D501D389B34D5AF2 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		5AF23A6A77C4475093F3412E2AE96C5F /* Build configuration list for PBXNativeTarget "UIColor+BFPaperColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD83EEB24F101546E11FCFBB /* Debug */,
-				CBD4379260C26BF3D5EC7B62 /* Release */,
+				F6163FE7AB0F3FB6A0F69C9F3424178B /* Debug */,
+				FAF0FCBFBD43B1CC0127572644FBAE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5554A74E58B64D442BD96093 /* Build configuration list for PBXProject "Pods" */ = {
+		91E02CE6616A946E53B2B71E9412E99F /* Build configuration list for PBXNativeTarget "Pods-BFPaperView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FAAFC1811F00D558EEF4CBD /* Debug */,
-				F23B5973F591D85D5E08C6AA /* Release */,
+				EA8B0EB2E43633B50018FBE11063E59F /* Debug */,
+				1F8007794E6238CB64107572A261154D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 297F68E5FD0CDC6A22F25BB5 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }
