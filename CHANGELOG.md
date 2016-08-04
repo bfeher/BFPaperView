@@ -6,6 +6,11 @@ BFPaperView
 
 
 
+2.2.6
+---------
+* (^) Properties now appear in Interface Builder (IBInspectable)! 
+
+
 2.2.4
 ---------
 * (-) Removed BFPaperColors dependency.  
