@@ -6,16 +6,24 @@ BFPaperView
 
 
 
+2.2.4
+---------
+* (-) Removed BFPaperColors dependency.  
+* (^) Modified BFPaperView to reflect the removal of BFPaperColors.
+* (+) Added launch screen to example project.
+* (^) Updated README.md to be a bit easier to understand.
+
+
 2.2.3
 ---------
-^ Migrated to CocoaPods 1.0.
+* (^) Migrated to CocoaPods 1.0.
 
 
 2.2.2
 ---------
-+ ^ Fixed bug where loweredShadowOffset property wasn't being utilized and instead was ignored for a hardcoded default value.
+* (^) Fixed bug where loweredShadowOffset property wasn't being utilized and instead was ignored for a hardcoded default value.
 
 
 2.2.1
 ---------
-+ + Github user @maxim-pervushin kindly added tap-location to the tap-handler block.
+* (+) Github user [Maxim Pervushin](https://github.com/maxim-pervushin) kindly added tap-location to the tap-handler block.

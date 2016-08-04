@@ -7,8 +7,7 @@
 //
 
 #import "BFPaperView.h"
-// Pods:
-#import "UIColor+BFPaperColors.h"
+
 
 @interface BFPaperView ()
 @property CGRect downRect;
@@ -389,7 +388,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
 - (void)fadeInBackgroundAndRippleTapCircle
 {
     // Spawn a growing circle that "ripples" through the view:
-    if ([UIColor isColorClear:self.backgroundColor]) {
+    if ([BFPaperView isColorClear:self.backgroundColor]) {
         // CLEAR BACKROUND SHOULD ONLY BE FOR FLAT VIEW!!!
         
         // Set the fill color for the tap circle (self.animationLayer's fill color):
@@ -551,7 +550,7 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
         [self.layer addAnimation:shadowOpacityAnimation forKey:@"shadowOpacity"];
     }
     
-    if ([UIColor isColorClear:self.backgroundColor]) {
+    if ([BFPaperView isColorClear:self.backgroundColor]) {
         // Remove darkened background fade:
         
         CGFloat startingOpacity = self.backgroundColorFadeLayer.opacity;
@@ -649,8 +648,27 @@ CGFloat const bfPaperView_tapCircleDiameterDefault = -2;
     }
     return finalDiameter;
 }
-#pragma mark -
 
+
+#pragma mark - Utility Functions
+#pragma mark Private
++ (BOOL)isColorClear:(UIColor *)color
+{
+    if (color == [UIColor clearColor]) { return YES; }
+    
+    NSUInteger totalComponents = CGColorGetNumberOfComponents(color.CGColor);
+    BOOL isGreyscale = (totalComponents == 2) ? YES : NO;
+    CGFloat *components = (CGFloat *)CGColorGetComponents(color.CGColor);
+    if (!components) { return YES; }
+    if(isGreyscale) {
+        if (components[1] <= 0) { return YES; }
+    } else {
+        if (components[3] <= 0) { return YES; }
+    }
+    return NO;
+}
+
+#pragma mark Public
 
 
 

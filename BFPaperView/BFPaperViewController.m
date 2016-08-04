@@ -7,9 +7,7 @@
 //
 
 #import "BFPaperViewController.h"
-
 #import "BFPaperView.h"
-#import "UIColor+BFPaperColors.h"
 
 
 @interface BFPaperViewController ()
@@ -26,18 +24,18 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // Customize large paper view:
-    self.largeBluePaperView.tapCircleColor = [UIColor paperColorAmber];
+    self.largeBluePaperView.tapCircleColor = [UIColor colorWithRed:255.f/255.f green:193.f/255.f blue:7.f/255.f alpha:1];
     self.largeBluePaperView.isRaised = YES;
     
     // Customize smaller center view:
-    self.smallGreenPaperView.tapCircleColor = [[UIColor paperColorDeepPurpleA400] colorWithAlphaComponent:0.9f];
+    self.smallGreenPaperView.tapCircleColor = [[UIColor colorWithRed:101.f/255.f green:31.f/255.f blue:255.f/255.f alpha:1] colorWithAlphaComponent:0.9f];
     self.smallGreenPaperView.cornerRadius = self.smallGreenPaperView.bounds.size.width / 2;
     self.smallGreenPaperView.rippleBeyondBounds = YES;
     self.smallGreenPaperView.rippleFromTapLocation = NO;
     self.smallGreenPaperView.tapCircleDiameter = self.smallGreenPaperView.bounds.size.width * 1.2;
     
     // Customize clear paper view:
-    self.clearPaperView.tapCircleColor = [UIColor paperColorBlue];
+    self.clearPaperView.tapCircleColor = [UIColor colorWithRed:33.f/255.f green:150.f/255.f blue:243.f/255.f alpha:1];
     self.clearPaperView.isRaised = NO;
     self.clearPaperView.layer.borderColor = [UIColor colorWithWhite:0.5 alpha:1].CGColor;
     self.clearPaperView.layer.borderWidth = 0.5f;
